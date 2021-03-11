@@ -1,5 +1,11 @@
 # Next.js
-
+-----
+## 事象
+#### 原因
+#### 回避策
+#### 修正前
+#### 修正後
+-----
 
 ## atnd-proのグラフ系コンポーネント使用したところ、ReferenceError: document is not definedエラーが発生。
  
