@@ -7,6 +7,47 @@
 #### 修正後
 -----
 
+## 初回レンダリング時にrouterがundefinedになる
+
+#### 回避策
+防ぎようがないので、undefinedでなくなったことを確認して読み込む
+
+#### 修正前
+ if (!(router.query.useId instanceof Object)) {
+   setUserId(router.query.useId)
+ }
+```
+
+#### 修正後
+```
+if (router.asPath !== router.route) {
+  if (!(router.query.useId instanceof Object)) {
+    setUserId(router.query.useId)
+  }
+}
+```
+-----
+
+## レイアウト内のchildrenにpropsを渡せない
+
+#### 回避策
+childrenをcloneしつつ、パラメータを付け加える
+
+#### 修正前
+```
+<div>
+  {children}
+</div
+```
+
+#### 修正後
+```
+<div>
+  {React.cloneElement(children, { user: loginUser })}
+</div
+```
+-----
+
 ## PWAに対応した後、Basic認証がUnauthorizedとなる
 
 #### 原因
@@ -22,8 +63,6 @@
 
 #### 回避策
 useEffectを使用して、ページ遷移先の初回読み込み時にトップに移動させる。
-
-#### 修正後
 ```
 useEffect(() => {
   window.scrollTo(0, 0)
