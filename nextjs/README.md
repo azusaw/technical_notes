@@ -7,6 +7,17 @@
 #### 修正後
 -----
 
+## PWAに対応した後、Basic認証がUnauthorizedとなる
+
+#### 原因
+- PWA対応に必要なService WorkerとBasic認証の相性が悪い
+- 認証情報のキャッシュが使われている
+
+#### 回避策
+- シークレットタブで開く
+- 開発ツールの`Bypass for network`にチェックを入れる
+
+-----
 ## ページ遷移時にページのトップに移動しない。
 
 #### 回避策
@@ -22,8 +33,8 @@ useEffect(() => {
 ## atnd-proのグラフ系コンポーネント使用したところ、ReferenceError: document is not definedエラーが発生。
  
 #### 原因
- - antdの内部で、ブラウザ上の変数である document を使用している
- - Next.jsがSSRの挙動をしている
+- antdの内部で、ブラウザ上の変数である document を使用している
+- Next.jsがSSRの挙動をしている
  
 #### 回避策
 Next.jsのDynamic Importを使い、SSRをfalseにする
