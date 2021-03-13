@@ -20,7 +20,7 @@ gyp ERR! stack     at ChildProcess.exithandler (child_process.js:294:12)
 ```
   
 #### 原因
-使用しているAnaconda3はPython3.xであるが、node-gypはPython2.7の想定で動いているため。
+使用しているAnaconda3はPython3.xであるが、node-gypはPython2.7の想定で動いているため
 ```
 # Python2.7
 import sys; print "%s.%s.%s" % sys.version_info[:3];
@@ -48,7 +48,7 @@ gyp ERR! build error
 ```
   
 #### 原因
-node-gypが必要としているC++のパッケージが見つからないため。
+node-gypが必要としているC++のパッケージが見つからないため
 
 #### 回避策
 - Visual Studio 2015/2017をインストールする
