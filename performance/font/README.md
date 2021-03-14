@@ -113,6 +113,7 @@ formatの指定も`opentype`から`woff2`に変更する。
 
 ### その後
 LightHouseのスコアをここまで改善することができた。
+
 ![image](https://user-images.githubusercontent.com/72424558/111059503-80e20d80-84d9-11eb-9510-ce12bfeb632d.png)
 
 #### sizeは上位の階層で指定する
