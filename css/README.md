@@ -62,11 +62,13 @@ Noto SansフォントはApache Licenseで配布のため、改変、再配布が
 ![image](https://user-images.githubusercontent.com/72424558/111055594-cfcc7a80-84ba-11eb-81ef-b912489c2379.png)
 
 以前こちらの記事を読んで、Self Hostingなら速くなることを期待していたが…。
-Time to Say Goodbye to Google Fonts](https://wicki.io/posts/2020-11-goodbye-google-fonts/)
+
+[Time to Say Goodbye to Google Fonts](https://wicki.io/posts/2020-11-goodbye-google-fonts/)
 
 ##### さらに圧縮
 otf形式に変換したファイルをWOFF2形式にする。
 WOFF2はWOFFより12% ほど圧縮効率が良いらしい。
+
 [WOFFコンバータ](http://opentype.jp/woffconv.htm)
 
 フォントファイルを 690KB -> 484KB まで縮小することができた。
@@ -80,6 +82,6 @@ formatの指定も`opentype`から`woff2`に変更する。
 }
 ```
 
-う～ん。変わらない。
+う～ん。変わらない！
 ![image](https://user-images.githubusercontent.com/72424558/111055950-63537a80-84be-11eb-823a-7a3e766d7312.png)
 
