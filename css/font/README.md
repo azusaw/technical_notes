@@ -14,6 +14,7 @@ WebFontを外してみたところ、劇的に改善。
 
 ![image](https://user-images.githubusercontent.com/72424558/111054148-6c881b80-84ad-11eb-9a61-7327d1c9f3dc.png)
 
+
 ### font-display: swapが効いていない？
 
 GoogleFontsのアクセスURLに`&display=swap;`を付けることで初期遅延は改善されるはずだが、適用されているCSSを確認すると`font-display:swap` が効いていないように見える。
