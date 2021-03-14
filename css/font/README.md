@@ -110,3 +110,38 @@ formatの指定も`opentype`から`woff2`に変更する。
 
 なお、`&text=`を指定することでGoogle Fontsでもサブセット化が可能。見出しなど文字が少ない時に利用すると良さそう。
 
+
+### その後
+LightHouseのスコアをここまで改善することができた。
+![image](https://user-images.githubusercontent.com/72424558/111059503-80e20d80-84d9-11eb-9510-ce12bfeb632d.png)
+
+#### sizeは上位の階層で指定する
+
+コンポーネントのmax-widthや、画像の大きさはそのコンポーネント単位でなく親の階層で制御するように工夫した。
+下の階層に指定すると親のサイズを考慮して計算するため遅延要因になり得るという記事を読んだため。
+
+#### Nuxtのmounted()を活用
+これが最も効果があった。
+mountedの実行をトリガーにメインコンテンツを表示する。
+
+画面初期表示のチラツキが気になって対応した内容。
+コンポーネントやCSSの構築中に準備が整ったコンポーネントが五月雨式に表示されてしまうと、画面表示が短時間に何度も切り替わり無駄に時間がかかってしまうとこのこと。
+
+```index.vue
+<template>
+  <div v-if="!loading">
+    ：
+  </div>
+</template>
+
+<script>
+export default {
+  mounted() {
+    this.loading = false;
+  },
+  data: () => ({
+    loading: true,
+    ：
+</script>
+```
+
