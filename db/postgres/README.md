@@ -48,7 +48,7 @@
 ### 操作
 |操作|コマンド|
 |---|---|
-|psqlに入る|psql -h localhost hulftiot|
+|psqlに入る|psql -h localhost hoge|
 |テーブルの一覧|\d|
 |プライマリーキーを指定してテーブル作成|create table tablename (word char(1024) NOT NULL PRIMARY KEY, count int);|
 |テーブル削除|drop table tablename;|
