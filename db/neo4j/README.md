@@ -10,7 +10,6 @@
 
 https://the.igreque.info/posts/2014-06-08-neo4j.html
 
-----
 
 # Cypher QL
 
