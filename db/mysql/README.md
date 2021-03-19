@@ -1,7 +1,7 @@
 # MySQL
 
 ### log
-Windows
+#### Windows
 My.iniに以下追加。
 負荷がかかるので調査時以外は外したほうが良い。
 ```
@@ -9,6 +9,27 @@ My.iniに以下追加。
 # すべてのクエリのログを出す
 log=myquery.log
 ```
+
+#### docker
+* ログを出力するように設定。
+  ```docker-compose.yml
+  volumes:
+    - ./mysql.cnf:/etc/mysql/conf.d/my.cnf
+  ```
+
+  ```mysql.cnf
+  [mysqld]
+  general_log=1
+  ```
+
+* dokcerにアクセスしてログを確認
+  ```
+  $ connect to decker
+  docker exec -it dbname /bin/bash
+
+  $ show log
+  tail -f '/var/lib/mysql/xxxx.log'
+  ```
 
 ### トランザクション分離レベル
 
