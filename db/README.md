@@ -1,9 +1,14 @@
 # DB
 
 ## RDB
+* DB2
+* MySQL
+* Oracle
+* PostgresSQL
+* SQLServer
 
 ## DocumentDB
-* mongoBD
+* mongoDB
 
 ## GraphDB
 * Neo4j
