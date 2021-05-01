@@ -12,6 +12,18 @@ https://flutter.dev/docs/get-started/install/windows
 #### Flutterが使用できるかの確認
 `fultter doctor`で必要な関連ライブラリが入っているかをチェックする
 
+`Android license status unknown.` が表示された場合は、`flutter doctor --android-licenses` を実行
+
+Java11で↑を実行した場合に以下のエラーが発生
+
+```Exception in thread "main" java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlSchema```
+
+　-> Java8（Andoroid Studio標準）にすることで解決する
+
+
+#### 「Windows ハイパーバイザープラットフォーム」をONにする
+Windowsの機能の有効化から設定
+
 ## For Android 📱
 
 #### Android Studio をPCにダウンロード
@@ -26,6 +38,17 @@ https://developer.android.com/studio/run/win-usb
 
 #### Androidエミュレータの有効化
 https://developer.android.com/studio/run/emulator-acceleration
+
+## Andoroid Stutdio
+
+#### Flutter Pluginのインストール
+起動後、[Configlation]-[Plugins]からインストール
+
+#### Flutterプロジェクトを作成
+Android Studio再起動後、FlutterアプリをCreateする
+
+#### AVD Managerの設定
+[Tools]-[AVD Manager]
 
 
 
