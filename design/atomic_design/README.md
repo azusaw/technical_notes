@@ -30,6 +30,7 @@ https://atomicdesign.bradfrost.com/chapter-2/
 * いくつかのAtomsを組み合わせて構成される
 * 単体では成立しない
 * プロダクトの情報を持たない
+* 1つだけの役割を持つ
 * 検索ボックス、ラベル付きテキストボックスなど
 
 <br />
@@ -43,6 +44,7 @@ https://atomicdesign.bradfrost.com/chapter-2/
 > Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface.
 
 * いくつかのAtoms/Moleculesを組み合わせて構成される
+* 機能は持たず、レイアウトを持つ
 * 単体で存在できる
 * <b>プロダクトの情報を持つ</b>
 * ヘッダー、フッター、入力フォーム全体など
