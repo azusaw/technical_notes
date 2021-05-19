@@ -13,9 +13,6 @@ https://atomicdesign.bradfrost.com/chapter-2/
 
 ![image](https://user-images.githubusercontent.com/72424558/118745327-e0211d00-b890-11eb-927b-8d3da4260c41.png)
 
-大規模サイト作成やひな型作成には確かに便利そうではあるが、ここまで細かく分けると作るの大変そう。
-
------
 
 ## 定義しておく
 ### Atoms
@@ -25,6 +22,8 @@ https://atomicdesign.bradfrost.com/chapter-2/
 * プロダクトの情報を持たない
 * フォーム、ボタン、ラベルなど。
 
+<br />
+
 ### Molecules
 > In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.
 
@@ -33,7 +32,14 @@ https://atomicdesign.bradfrost.com/chapter-2/
 * プロダクトの情報を持たない
 * 検索ボックス、ラベル付きテキストボックスなど
 
+<br />
+
 ### Organisms
+
+📌 Organismsはサイト名などが入っていて、ほかのプロジェクトでは流用できない単位になる。
+
+📌 データを持たせられるということなので、APIで取得した情報を持たせてもOK。
+
 > Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface.
 
 * いくつかのAtoms/Moleculesを組み合わせて構成される
@@ -41,9 +47,7 @@ https://atomicdesign.bradfrost.com/chapter-2/
 * <b>プロダクトの情報を持つ</b>
 * ヘッダー、フッター、入力フォーム全体など
 
-Organismsはサイト名などが入っていて、ほかのプロジェクトでは流用できない単位になる。
-
-データを持たせられるということなので、APIで取得した情報を持たせてもOK。
+<br />
 
 ### Templates
 > Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure.
@@ -51,6 +55,8 @@ Organismsはサイト名などが入っていて、ほかのプロジェクト�
 * いくつかのAtoms/Molecules/Organismsを組み合わせて構成されたワイヤーフレーム
 * 単体で存在できない
 * ページレイアウト
+
+<br />
 
 ### Pages
 > Pages are specific instances of templates that show what a UI looks like with real representative content in place. 
