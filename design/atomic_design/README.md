@@ -48,13 +48,14 @@ Organismsはサイト名などが入っていて、ほかのプロジェクト�
 ### Templates
 > Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure.
 
-* いくつかのAtoms/Molecules/Organismsを組み合わせて構成される
+* いくつかのAtoms/Molecules/Organismsを組み合わせて構成されたワイヤーフレーム
 * 単体で存在できない
 * ページレイアウト
 
 ### Pages
 > Pages are specific instances of templates that show what a UI looks like with real representative content in place. 
 
+* Templatesにデータが挿入されたもの
 * 最終的に完成するページ
 
 
