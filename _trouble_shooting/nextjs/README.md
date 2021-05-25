@@ -13,6 +13,7 @@
 防ぎようがないので、undefinedでなくなったことを確認して読み込む
 
 #### 修正前
+```
  if (!(router.query.useId instanceof Object)) {
    setUserId(router.query.useId)
  }
