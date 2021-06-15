@@ -27,7 +27,7 @@ HTMLですよのサイン<br />
 
 ----
   
-### head
+## head
 ```
 head
 ├─ <title>  検索結果やブックマーク名として使用される言葉
@@ -40,7 +40,7 @@ head
 └─ <meta>   文書に関するメタデータを指定
 ```
 
-#### meta
+### meta
 `<meta name="xxxx" content="xxxxxxxxx">` の形で様々な情報を指定する
   * keywods: 検索エンジンにインデックス用キーワードを与える
   * description: 文書の説明 検索エンジンに使用されるので注意
@@ -54,8 +54,10 @@ head
   <meta name="description" content="azusaw"のウェブサイトです。">
   <meta name="robots" content="noindex, nofollow">
 ```
-  
-### body
+
+----
+                                                 
+## body
 ```
 section
 ├─ <section> 1つのまとまり（セクション）
@@ -107,7 +109,7 @@ form
 └─ <progress> 進行状況
 ```
 
-#### input
+### input
 `<input type=xxxx>`次第で様々な入力フォームになる
 * text: 1行のテキスト      
 * search: 検索ボックス
