@@ -12,8 +12,8 @@ _xxxx.my-domain.co.jp CNAME _xxxxxxxxx.xxxxxxxxx.acm-validations.aws
 ```
 
 ### CNAMEの設定
-次にAレコード(Alias)とCNAMEをお名前.comのDNSレコードに登録する必要があるが
-お名前.comでAレコードはサポートしていないため設定が不可能。
+次にAレコード(Alias)とCNAMEをお名前.comのDNSレコードに登録する必要があるが、
+お名前.comでAレコードはサポートしていないため設定が不可能だと判明。
 
 ### どうするか
 以下の方針に変更。
@@ -45,4 +45,9 @@ _xxxxxxxx.xxxxxx.acm-validations.aws.
 www.my-domain.co.jp	CNAME	シンプル	-	
 xxxxxxx.cloudfront.net
 ```
+
+### 問題点
+今回は未使用ドメインのため、ネームサーバをまるまるRoute53に転送することで対処できた。
+使用中ドメインの場合は、外部のDNSサーバに設定をしていく方が良さそう。
+お名前.comにはなかったものの、ムームードメインはAliasをサポートしている模様。
 
