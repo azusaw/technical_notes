@@ -18,7 +18,7 @@ _xxxx.my-domain.co.jp CNAME _xxxxxxxxx.xxxxxxxxx.acm-validations.aws
 ### どうするか
 以下の方針に変更。
 * Route53にホストゾーンを作成し、今まで設定したDNSレコードの内容を移行
-* お名前.comではほかのネームさーん場を使用するように設定
+* お名前.comではほかのネームサーバーを使用するように設定
 
 最終的なレコードは以下。
 ```
