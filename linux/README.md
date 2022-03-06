@@ -2,9 +2,35 @@
 ## curl
 
 ## dig
+ドメイン名からIPアドレスを調べる
+結果を加工しないのでトラシューではdig推奨
+```
+$ dig www.google.com
 
-## dns
-ドメイン名に対してIPアドレスを返す
+google.com.             289     IN      A       74.125.193.100
+google.com.             289     IN      A       74.125.193.138
+google.com.             289     IN      A       74.125.193.113
+google.com.             289     IN      A       74.125.193.101
+google.com.             289     IN      A       74.125.193.139
+google.com.             289     IN      A       74.125.193.102
+
+$ dig -x IPアドレス で逆引き
+```
+
+## host
+ドメイン名からIPアドレスを調べる
+disの簡単版
+```
+$ host google.co.jp
+
+google.co.jp has address 74.125.193.94
+google.co.jp has IPv6 address 2a00:1450:400b:c01::5e
+google.co.jp mail is handled by 0 smtp.google.com.
+```
+
+## nsloolup
+ドメイン名からIPアドレスを調べる
+非推奨
 ```
 $ nslookup www.yahoo.co.jp
 
