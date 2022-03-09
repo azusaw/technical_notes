@@ -241,6 +241,13 @@ LANとは独立した別のネットワークとして構築される。
 設定を変更することで個別に独立してネットワークとして機能させることができる。
 
 
+### SHA-256
+しゃーにごろ。ハッシュアルゴリズムの代表的なもののひとつ。
+ハッシュ関数は主に改ざん検知に使われている。
+MD系とSHA系の二つに分けあれるが、MD系（128bit）は衝突性が確認されているためSHAのほうが安全。
+SSL/TLSサーバ証明書にも使われている。
+
+
 ### TCP-IP
 
 * IP：Internet Protocol > IPアドレス
@@ -264,7 +271,30 @@ IPアドレスをみて、ルーターが宛先のホストを決定する。送
 OSI基本参照モデルのトランスポート層において、
 通信の暗号化、ディジタル署名を利用した改ざん検出、ノード認証などの機能を提供する
 統合セキュアプロトコル。
-主にWebブラウザとWebSa-ba 間でデータを安全にやり取りするための業界標準プロトコル。
+主にWebブラウザとWebサーバ間でデータを安全にやり取りするための業界標準プロトコル。
+webサイト運営元の確認＋暗号化通信が目的。
+SSLの後継なのでSSL/TLSと纏められることが多い。
+```
+SSL/TLSハンドシェイクはTCP/IPのハンドシェイクよりも複雑
+
+1. Client Hello
+2. Server Hello
+3. (Server Certificate)
+4. (Server Key Exchange)
+5. (Certificate Request)
+6. Server Hello Done
+7. (Client Certificate)
+8. Client Key Exchange
+9. (Certificate Verify)
+10. Change Cipher Spec
+11. Finished
+12. Change Cipher Spec
+13. Finished
+14. 暗号化通信開始
+
+毎回ハンドシェイクをする穂は大変なので、セッション情報をキャッシュとして保存し、再利用している
+
+```
 
 
 ### VDI：Virtual Desktop Infrastructure
