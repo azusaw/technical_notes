@@ -73,10 +73,29 @@ The security requirement for IV is not the same as for the key.
   * replace plaintext symbol(s) with corresponding cipher-text symbol(s).
 * Transposition (permutation) cipher(並べ替え)
   * reorder plaintext symbols within the cipher-text.
-* DES, AES
+* Secret-Key Cryptography
+ * DES, AES
+ 
+ #### The Diffie-Hellman Scheme (D-H)
+ 事前の秘密の共有無しに、盗聴の可能性のある通信路を使って、暗号鍵の共有を可能にする、公開鍵暗号方式の暗号プロトコル
 
 ## Asymmetric cryptography
+* Use session key and permanent key
 * RSA
+
+#### RSA (Rivest, Shamir, Adleman, 1977)
+* Regarded as the most practical public-key scheme
+* block cipher
+* Used for...
+ * encrypting messages
+ * key exchange
+ * creating digital signatures
+* culclate...
+ * encryption c = me mod n (publicly known numbers e and n)
+ * decryption m = cd mod n (private/secret number d)
+ * 送信者と受信者の両方がnとeの値を知っている
+ * dの値は受信者のみが知る
+
 
 # Keyword
 #### Diffusion
@@ -106,4 +125,37 @@ It should be hard for attacker to infer the key.
 
 # Hash
 #### One-way hash functions
-####
+* メッセージが１ビットでも異なればハッシュ値は変わる
+* ハッシュ値からメッセージの逆算はできない
+* メッセージの長さに限らず、ハッシュ値は常に固定サイズ
+* ハッシュ値のサイズは小さい
+* different names..
+ * hash function
+ * compression function
+ * message digest
+ * fingerprint
+ * cryptographic checksum
+ * message integrity check
+ * message detection code
+* Message Authentication Codes (MAC)
+* Digital Signatures
+* SHA-256, md5
+
+
+#### Mathmatical background
+* Modular Arithmetic
+ * x = y (mod n)
+ * 2 = 7 mod 5
+ * (x mod p)(y mod p) = x y mod pgx = ax mod p = (a mod p) … (a mod p) <- nこ
+
+* Exponentials 指数
+ * gx = ax mod p = (a mod p) … (a mod p)
+ * (gx)y = axy mod p 
+
+* The greatest common divisor 最大公約数
+ * gcd(n, m)
+ * gcd(12, 8) = 4, gcd(9, 12) = 3
+
+* Prime Factorisation as a Trapdoor 素因数分解
+ * Given primes p, q, it is easy to find n = p q
+ * Given n, it is hard to find the primes p, q
