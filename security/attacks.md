@@ -25,8 +25,6 @@ Unit1
     * ユーザーに脆弱性のあるWebサイトにリクエストさせる
     * ユーザーのブラウザで不正なスクリプトを実行させて、情報の詐取やマルウェア感染などを行う
 
-## Stored XSS
-
 # Phishing
 * Get user to send authentication credentials 
 
