@@ -50,7 +50,7 @@ Unit1
 * A common use is to spawn a shell that the attacker can control.
 
 
-## zero-day vulnerabilities
+# zero-day vulnerabilities
 * A vulnerability in a system or device that has been disclosed but is not yet patched.
 * An exploit that attacks a zero-day vulnerability is called a zero-day exploit.
 * Exploitable bugs previously unknown to the outside world, even major developers like Microsoft.
@@ -61,7 +61,7 @@ Unit1
 * Input validation and sanitization
 * Zero-day initiative
 
-## Runsumware
+# Runsumware
 * WannaCry ransomware attack in 2017 UK NHS
 * NHS legacy systems did not have extended support. Patches not applied.
 
