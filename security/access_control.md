@@ -101,9 +101,9 @@ Entities > Identities > Identifilers
 * ACLとか、個人に対してもアクセス認可
 
 #### Attribute-based Access Control 属性ベースのアクセスコントロール
-*　XACMLという特殊な言語でポリシーを記述する
-*　Groups、RBAC(Role-based access control)はこっちにみなされる
-*　e.g. 
+* XACMLという特殊な言語でポリシーを記述する
+* Groups、RBAC(Role-based access control)はこっちにみなされる
+* e.g. 
   * ドキュメントがユーザーと同じ部門にある場合、ユーザーはドキュメントを表示できます。
   * ユーザーが所有者であり、ドキュメントが下書きモードの場合、ユーザーはドキュメントを編集できます。
   * 午前 9 時より前にアクセスを拒否します。
