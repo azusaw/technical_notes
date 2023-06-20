@@ -3,7 +3,7 @@
 ### メール通知
 ```
 /* 問い合わせがきたことを管理者アドレスにメール通知する */
-function sendMailToClinic(e){
+function sendMailToAdmin(e){
   
   var adminmail = 'hoge@hoge.com;'  /* 問い合わせがあったことを通知したいEmailアドレスを指定する */
   var items = e.response.getItemResponses();
